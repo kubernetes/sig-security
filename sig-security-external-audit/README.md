@@ -22,8 +22,8 @@ The subproject produces a RFP for a third-party, comprehensive security audit. T
 methodology, selection criteria, and deliverables in the RFP.
 
 Previous RFPs:
-  - [2019](https://github.com/kubernetes/community/blob/master/sig-security/security-audit-2019/RFP.md)
-  - [2021](https://github.com/kubernetes/community/blob/master/sig-security/security-audit-2021/RFP.md)
+  - [2019](https://github.com/kubernetes/sig-security/blob/main/sig-security-external-audit/security-audit-2019/RFP.md)
+  - [2021](https://github.com/kubernetes/sig-security/blob/main/sig-security-external-audit/security-audit-2021/RFP.md)
 
 As efforts begin for the year's security audit, create a tracking issue for the security audit in 
 `kubernetes/community` with the `/sig security` label.
@@ -76,11 +76,11 @@ Should a conflict arise during the proposal review, reviewers should notify the 
 ## Vendor Selection
 
 On the vendor selection date, the subproject will publish a the selected vendor in the 'sig-security' folder in the `kubernetes/community` repository. 
-[Example from the 2019 audit](https://github.com/kubernetes/community/blob/master/sig-security/security-audit-2019/RFP_Decision.md).
+[Example from the 2019 audit](https://github.com/kubernetes/sig-security/blob/main/sig-security-external-audit/security-audit-2019/RFP_Decision.md).
 
 ## Deliverables
 
 The deliverables of the audit are defined in the RFP e.g. findings report, threat model, white paper, audited reference architecture spec (with yaml manifests) and published in the 'sig-security' folder in the `kubernetes/community` repository. 
-[Example from the 2019 audit](https://github.com/kubernetes/community/tree/master/sig-security/security-audit-2019/findings).
+[Example from the 2019 audit](https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit/security-audit-2019/findings).
 
 **All information gathered and deliverables created as a part of the audit must not be shared outside the vendor or the subproject without the explicit consent of the subproject and SIG Security chairs.**
