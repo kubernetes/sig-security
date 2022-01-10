@@ -1,10 +1,5 @@
 # Kubernetes Admission Control Threat Model
 
-
-[TOC]
-
-
-
 ## Introduction
 
 Kubernetes admission control is a key area of security for cluster operators. Admission control can be used to help ensure the consistent security of workloads and other resources deployed to clusters. 
