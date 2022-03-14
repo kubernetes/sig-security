@@ -10,7 +10,7 @@ To understand how this file is generated, see https://git.k8s.io/community/gener
 
 Covers horizontal security initiatives for the Kubernetes project, including regular security audits, the vulnerability management process, cross-cutting security documentation, and security community management.
 
-The [charter](charter.md) defines the scope and governance of the Security Special Interest Group.
+The [charter](https://github.com/kubernetes/community/blob/master/sig-security/charter.md) defines the scope and governance of the Security Special Interest Group.
 
 ## Meetings
 *Joining the [mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-security) for the group will typically add invites for the following meetings to your calendar.*
@@ -30,6 +30,7 @@ The Chairs of the SIG run operations and processes governing the SIG.
 - Slack: [#sig-security](https://kubernetes.slack.com/messages/sig-security)
 - [Mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-security)
 - [Open Community Issues/PRs](https://github.com/kubernetes/community/labels/sig%2Fsecurity)
+- [Sig-Security Issues](https://github.com/kubernetes/sig-security/issues)
 - GitHub Teams:
     - [@kubernetes/sig-security-leads](https://github.com/orgs/kubernetes/teams/sig-security-leads) - SIG Security Leads
     - [@kubernetes/sig-security-pr-reviews](https://github.com/orgs/kubernetes/teams/sig-security-pr-reviews) - SIG Security PR review notifications
