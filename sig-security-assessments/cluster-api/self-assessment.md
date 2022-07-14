@@ -255,9 +255,8 @@ without disturbing the whole cluster quorum.
 
 The general expectation from the control plane controller is to make sure that
 the control plane node is created with the services like etcd, kubernetes API
-server, kubernetes controller manager, scheduler, cloud controller manager,
-kube-proxy and CoreDNS. It also provides the current status of the control plane
-to the operators.
+server, kubernetes controller manager, scheduler, kube-proxy and CoreDNS.
+It also provides the current status of the control plane to the operators.
 
 Kubeadm control plane controller also manages kubeconfig secrets, which can be
 utilized by the operators to access the workload clusters.
