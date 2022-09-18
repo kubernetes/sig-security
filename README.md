@@ -26,12 +26,15 @@ The Chairs of the SIG run operations and processes governing the SIG.
 - GitHub Teams:
     - [@kubernetes/sig-security-leads](https://github.com/orgs/kubernetes/teams/sig-security-leads) - SIG Security Leads
     - [@kubernetes/sig-security-pr-reviews](https://github.com/orgs/kubernetes/teams/sig-security-pr-reviews) - SIG Security PR review notifications
-    - [@kubernetes/sig-security-assessments](https://github.com/kubernetes/sig-security/blob/main/sig-security-assessments/OWNERS) - SIG Security Assessments
 - Steering Committee Liaison: Paris Pittman (**[@parispittman](https://github.com/parispittman)**)
 
 ## Subprojects
 
 The following [subprojects][subproject-definition] are owned by sig-security:
+### security-assessments
+Information about Security Assessments
+- **Owners:**
+  - [@kubernetes/sig-security-assessments](https://github.com/kubernetes/sig-security/blob/main/sig-security-assessments/OWNERS)
 ### security-audit
 Third Party Security Audit
 - **Owners:**
