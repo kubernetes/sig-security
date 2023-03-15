@@ -4,7 +4,7 @@ breaks: false
 <!-- markdownlint-configure-file { "MD013": { "line_length": 120 } } -->
 <!-- markdownlint-disable-file MD034 -->
 
-# Cluster API Security Self-Assessment
+# vSphere CSI Driver Security Self-Assessment
 
 ## Metadata
 
