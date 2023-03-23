@@ -1,7 +1,9 @@
 ##  Learning Sessions
 
-Here is the list of learning sessions hosted by sig-security tooling community:
+- For the most up to date information, please visit the [Kubernetes Sig Security Tooling Sub-project Meeting Notes](https://docs.google.com/document/d/1_Rn7S8UPMtXdu6EDl4_L2Ogb433z7hlxPs7El8TfNNg/edit?usp=sharing).
+- Also, please check out the slack channel at [#sig-security-tooling](https://kubernetes.slack.com/archives/C01CUSVMHPY).
 
+Here is the list of learning sessions hosted by sig-security tooling community:
 
 |  **Date**  |                        **Topic**                                               | **Speaker**                                              |                   **Link**                  |
 |------------|:------------------------------------------------------------------------------:|----------------------------------------------------------|:-------------------------------------------:|
