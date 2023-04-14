@@ -17,7 +17,7 @@ people (a project expert, a security champion, and a backup for each), and a max
 not overwhelming burden on any one individual but allows for a smooth decision-making process.
 1. Once you have a dedicated group of individuals ready to start the Security Assessment you can open an issue to request
 a Slack channel for the project specific assessment - here's an [example](https://github.com/kubernetes/community/pull/7015).
-1.	Create a Google doc for meeting notes using 
+1.	Create a Google doc for meeting notes using the
 [Kubernetes community meeeting notes template](https://github.com/kubernetes/community/blob/master/events/community-meeting.md) 
 ## Meetings
 - Once you have your collateral and your team together, set up a kickoff meeting with everyone. It is likely that not 
