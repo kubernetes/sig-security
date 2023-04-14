@@ -4,7 +4,7 @@ to have you here. Below is an outline of the journey to get to a successful Self
 
 ## Preparation
 Set yourself up for success – build your team and get organized
-1.	Open a Security Assessment Request using the [issue template.](https://github.com/kubernetes/sig-security/issues/new/choose)
+1.	Open a Security Assessment Request using the [issue template](https://github.com/kubernetes/sig-security/issues/new/choose).
 1. Figure out who can do this Self-assessment with you. You will need a security champion and a counterpart who owns the 
 project and is an expert in it. If you are requesting a Security Self-assessment you can reach out to the team in
 [#sig-security](https://kubernetes.slack.com/messages/sig-security), and [#sig-security-assessments](https://kubernetes.slack.com/archives/C0441E11REC) to see if there is someone interested in helping to
