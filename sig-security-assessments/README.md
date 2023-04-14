@@ -5,7 +5,7 @@ the project. The resulting assessment will allow maintainers to determine gaps i
 strategy to work toward improving it.
 
 ## Completed Assessments
-- [Cluster API](https://github.com/kubernetes/sig-security/blob/main/sig-security-assessments/cluster-api/self-assessment.md)
+- [Cluster API](https://github.com/kubernetes/sig-security/blob/1e6f14de2edae1662e2897a933071928515cc27c/sig-security-assessments/cluster-api/self-assessment.md)
 
 ## Getting Started
 If you have a project for which you would like to complete a Self-assessment you can take a look at the 
