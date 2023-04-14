@@ -12,7 +12,7 @@ champion the assessment.
 1.	Make sure that you and your counterpart each have a back-up person assigned who attends all the meetings and is 
 involved in the assessment. Two heads are better than one, and redundancy means that if someone can’t make a meeting 
 for whatever reason, that you can still make progress.
-1.	To get further participation, advertise in SIG meetings and channels for the project, as well as SIG-Security. Aim for a minimum of 4 
+1.	To get further participation, advertise in SIG meetings and channels for the project, as well as SIG Security. Aim for a minimum of 4 
 people (a project expert, a security champion, and a backup for each), and a maximum of 8. This ensures that there is 
 not overwhelming burden on any one individual but allows for a smooth decision-making process.
 1. Once you have a dedicated group of individuals ready to start the Security Assessment you can open an issue to request
