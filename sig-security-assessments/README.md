@@ -13,7 +13,7 @@ If you have a project for which you would like to complete a Self-assessment you
 for next steps.
 
 ## Getting Involved
-If you would like to participate in the SIG-Security Security Self-assessment subject please join the SIG-Security
+If you would like to participate in the SIG Security Self-assessment area of work, please join the SIG Security
 [mailing list](https://groups.google.com/forum/#!forum/kubernetes-sig-security) to be added to meeting invites.
 
 ## Leadership
