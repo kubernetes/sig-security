@@ -23,7 +23,7 @@ a Slack channel for the project specific assessment - here's an [example](https:
 - Once you have your collateral and your team together, set up a kickoff meeting with everyone. It is likely that not 
 everyone will show up. That’s ok!
 - Keep meeting notes using the doc you created during the preparation phase.
-- Create a recurring meeting series of about ~6 meetings (this is flexible and can be extended if necessary).
+- Create a recurring meeting series of about 6 meetings (this is flexible and can be extended if necessary).
 - These sessions can be ad hoc and should be set for whatever timing works for the group.
 ## The Assessment
 ### Step One
