@@ -43,7 +43,7 @@ Now that you have scope defined, we can come up with threats that are reasonable
 - Use the [TAG Self-assessment template](https://github.com/cncf/tag-security/blob/main/assessments/guide/self-assessment.md) 
 to write up the report. You can use Google Docs or HackMD – whatever the project team is most comfortable with. 
 - Once the team is happy with the above doc, convert it into a markdown PR and assign reviewers.
-- Now is a good time to start writing a [blog post](https://github.com/kubernetes/website/tree/main/content/en/blog) to 
+- Now is a good time to start writing a [blog post](https://kubernetes.io/docs/contribute/new-content/blogs-case-studies/) to
 share once the review is done.
 ### Step Four 
 Once the reviews are complete, the Self-assessment can be merged!
