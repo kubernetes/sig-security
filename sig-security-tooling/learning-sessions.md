@@ -6,7 +6,7 @@
 Here is the list of learning sessions hosted by sig-security tooling community:
 | **Date**   | **Topic**                                                              | **Speaker(s)**                                                                                          | **Link**                                     |
 | ---------- | :--------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------- | :------------------------------------------: |
-| 03-29-2023 | [Copacetic](https://github.com/project-copacetic/copacetic)            | [Xander Grzywinski](https://github.com/salaxander)                                                      |                                              |
+| 03-29-2023 | [Copacetic](https://github.com/project-copacetic/copacetic)            | [Xander Grzywinski](https://github.com/salaxander)                                                      | https://www.youtube.com/watch?v=6Be41Nf52ts  |
 | 03-01-2023 | [Security-Guard](https://github.com/knative-sandbox/security-guard)    | [David Hadas](https://github.com/davidhadas)                                                            | https://youtu.be/FNIdRBGwzOo                 |
 | 08-16-2022 | [KubeAudit](https://github.com/shopify/kubeaudit)                      | [Genevieve Luyt](https://github.com/genevieveluyt) & [Dani Santos](https://github.com/dani-santos-code) | https://youtu.be/m18AIFmfM00                 |
 | 07-05-2022 | [Eraser](https://github.com/Azure/eraser)                              | [Xander Grzywinski](https://twitter.com/XanderGrzy)                                                     | https://youtu.be/c1yhWxxEkJI                 |
