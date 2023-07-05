@@ -6,9 +6,12 @@ This paper provides guidance on how Kubernetes policies can be used to achieve o
 # Authors
 
 * Anca Salier, IBM
-* Ardhna Chetal, TIAA
+* Andy Suderman, Fairwinds
+* Gus Parvin, Red Hat
 * Jayashree Ramanathan, Red Hat 
 * Jim Bugwadia, Nirmata
+* Poonam Lamba, Google
+* Raj Krishnamurthy, ComplianceCow
 * Robert Ficcaglia, Sunstone Secure
 
 # Reviewers
