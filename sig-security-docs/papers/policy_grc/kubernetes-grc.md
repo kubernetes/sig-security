@@ -201,7 +201,7 @@ A community catalog of best practice policies can provide a starting point to im
 ## Policy Engines
 * [jsPolicy](https://www.jspolicy.com/): jsPolicy allows easier & faster Kubernetes Policies using JavaScript or TypeScript.
 * [Kyverno](https://kyverno.io/): Kyverno is a policy engine designed for Kubernetes that allows validation, mutation, generation of resources and image verification, with no complex language necessary.
-* [KubeWarden](https://www.kubewarden.io/): Kubewarden is a policy engine for Kubernetes. It helps with keeping your Kubernetes clusters secure and compliant.
+* [Kubewarden](https://kubewarden.io/): Kubewarden is a policy engine for Kubernetes with validation, mutation, image verification, and context-aware policies. It aims to be the universal policy engine as its policies are Wasm modules, allowing to use the language of your choice.
 * [OPA/Gatekeeper](https://open-policy-agent.github.io/gatekeeper/website/) provides admission control capability that can act on policies to check for conformance to best practices.
 * [Polaris](https://www.fairwinds.com/polaris): Polaris is an open source policy engine for Kubernetes that validates and remediates resource configuration. It includes 30+ built in configuration policies, as well as the ability to build custom policies with JSON Schema.
 
