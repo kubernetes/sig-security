@@ -32,12 +32,15 @@ The diagram below shows how Kubernetes GRC builds on policy management and spans
 
 * Anca Salier, IBM
 * Andy Suderman, Fairwinds
+* Brandt Keller, Defense Unicorns
 * Gus Parvin, Red Hat
 * Jayashree Ramanathan, Red Hat 
 * Jim Bugwadia, Nirmata
+* Jon Zeolla, Seiso
 * Poonam Lamba, Google
 * Raj Krishnamurthy, ComplianceCow
 * Robert Ficcaglia, Sunstone Secure
+* Yuji Watanabe, IBM
 
 ## Reviewers
 
