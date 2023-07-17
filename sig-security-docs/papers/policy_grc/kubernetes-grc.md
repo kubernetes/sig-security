@@ -230,7 +230,7 @@ A community catalog of best practice policies can provide a starting point to im
 * [Trestle](https://ibm.github.io/compliance-trestle/) is an ensemble of tools that enable the creation, validation, and governance of documentation artifacts for compliance needs. It leverages NIST's OSCAL as a standard data format.
 
 ## Multi-cluster Governance
-* [Open Cluster Management](https://open-cluster-management.io/) : Provides a multi-cluster management technology that can be used  to manage multiple clusters for creating/importing clusters, configure them to desired state using policies
+* [Open Cluster Management](https://open-cluster-management.io/) : Provides a multi-cluster management technology that can be used  to manage multiple clusters for creating/importing clusters, configure them to desired state using policies.
 * [ArgoCD](https://argo-cd.readthedocs.io/): Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes. It can be used to deploy and manage Kuberentes resources, including policies, across clusters.
 * [Flux](https://fluxcd.io/): Flux is a set of continuous and progressive delivery solutions for Kubernetes that are open and extensible. It can be used deploy and manage Kuberentes resources, including policies, across clusters.
 
