@@ -218,7 +218,7 @@ A community catalog of best practice policies can provide a starting point to im
 ## Configuration Scanners
 * [Cloud Custodian](https://cloudcustodian.io/) : A rules engine that can detect, alert on, and/or modify resources that are misconfigured in public cloud accounts.
 * [kube-bench](https://github.com/aquasecurity/kube-bench) : kube-bench is a tool that checks whether Kubernetes is deployed securely by running the checks documented in the CIS Kubernetes Benchmark.
-* [Kubescape](https://github.com/kubescape/kubescape) : Kubescape is an open-source Kubernetes security platform. It includes risk analysis, security compliance, and misconfiguration scanning
+* [Kubescape](https://github.com/kubescape/kubescape) : Kubescape is an open-source Kubernetes security platform. It includes risk analysis, security compliance, and misconfiguration scanning.
 
 ## SBOM Generators
 * [OSS Review Toolkit](https://github.com/oss-review-toolkit/ort) - A suite of tools for managing open source projects including SBOM generation, dependency management, and technically enforcing the policies of a project.
