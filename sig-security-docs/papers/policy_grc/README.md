@@ -10,7 +10,11 @@ The paper is intended to be a living document that is maintained for the communi
 
 ### Format
 
-The paper is maintained in markdown format. A PDF format document is generated for each new version.
+The paper is maintained in markdown format. A PDF format document is generated for each new version. 
+
+Here is the latest PDF:
+
+[Policy-Based Kubernetes Governance, Risk, and Compliance, Version 1 October 11 2023](/sig-security-docs/papers/policy_grc/Kubernetes_Policy_WG_Paper_v1_101123.pdf)
 
 ### Contributions
 
