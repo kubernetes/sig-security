@@ -34,3 +34,4 @@ The Kubernetes community is invited to create issues and PRs to request addition
 | cni plugins | TBD | https://github.com/containernetworking/cni |
 | csi plugins | TBD | https://github.com/kubernetes-csi |
 | aggregator layer | TBD | https://github.com/kubernetes/kube-aggregator |
+| windows | TBD | https://github.com/kubernetes/enhancements/tree/master/keps/sig-auth/2579-psp-replacement https://github.com/kubernetes/kubelet https://kubernetes.io/docs/concepts/workloads/pods/#pod-os https://github.com/kubernetes-csi/csi-proxy https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.28/#windowssecuritycontextoptions-v1-core https://github.com/kubernetes/kubernetes/tree/master/pkg/proxy/winkernel |
