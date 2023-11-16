@@ -69,7 +69,7 @@ breaks: false
 ### Intended Uses of the Project
 
 
-### Personas
+### Personas/Actors
 
 #### Cloud Admin
 
