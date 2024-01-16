@@ -9,7 +9,7 @@ strategy to work toward improving it.
 
 ## Getting Started
 If you have a project for which you would like to complete a Self-assessment you can take a look at the 
-[Self-assessment Recipe Book](https://github.com/kubernetes/sig-security/blob/main/sig-security-assessments/recipe-book.md)
+[Self-assessment Recipe Book](https://github.com/kubernetes/sig-security/blob/main/sig-security-assessments/Documentation/recipe-book.md)
 for next steps.
 
 ## Getting Involved
