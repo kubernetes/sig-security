@@ -8,12 +8,22 @@ The subproject publishes the deliverables of the audit after abiding to the
 [Security Release Process](https://github.com/kubernetes/committee-security-response/blob/main/security-release-process.md) and 
 [embargo policy](https://github.com/kubernetes/committee-security-response/blob/main/private-distributors-list.md#embargo-policy).
 
+  
+  - [Initial steps](#initial-steps)
   - [Request for Proposal (RFP)](#rfp)
     - [Security Audit Scope](#security-audit-scope)
     - [Vendor and Community Questions](#vendor-and-community-questions)
   - [Review of Proposals](#review-of-proposals)
   - [Vendor Selection](#vendor-selection)
+  - [SRC Review](#src-review)
   - [Deliverables](#deliverables)
+  - [Publish Findings](#publish-findings)
+
+## Initial steps
+
+Notify the CNCF and Kubernetes Steering Committee that the External Audit subproject is in the initial phase of an external audit. Ask the Kubernetes Steering Committee through the [#steering-committee Slack channel](https://kubernetes.slack.com/archives/CPNFRNLTS) to create a ticket with the [CNCF Service Desk](http://servicedesk.cncf.io/). Only Steering Committee members, SIG ContribEx leads, SIG Release leads, and SIG K8s-Infra leads can create service desk tickets with the CNCF for Kubernetes.
+
+Create an umbrella issue under https://github.com/kubernetes/sig-security to track tasks and progress of the external audit. e.g. https://github.com/kubernetes/sig-security/issues/104
 
 ## RFP
 
@@ -78,9 +88,27 @@ Should a conflict arise during the proposal review, reviewers should notify the 
 On the vendor selection date, the subproject will publish a the selected vendor in the 'sig-security' folder in the `kubernetes/community` repository. 
 [Example from the 2019 audit](https://github.com/kubernetes/sig-security/blob/main/sig-security-external-audit/security-audit-2019/RFP_Decision.md).
 
+
+## SRC review
+
+Send findings to the SRC for review and discussion.
+
 ## Deliverables
 
 The deliverables of the audit are defined in the RFP e.g. findings report, threat model, white paper, audited reference architecture spec (with yaml manifests) and published in the 'sig-security' folder in the `kubernetes/community` repository. 
 [Example from the 2019 audit](https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit/security-audit-2019/findings).
 
 **All information gathered and deliverables created as a part of the audit must not be shared outside the vendor or the subproject without the explicit consent of the subproject and SIG Security chairs.**
+
+## Publish findings
+
+Coordinate with the vendor and CNCF to publish a blog post to announce the findings.
+The blog post may serve as the publication of the audit findings. 
+
+Previous blog posts:
+[2023 New Kubernetes security audit complete and open sourced](https://www.cncf.io/blog/2023/04/19/new-kubernetes-security-audit-complete-and-open-sourced/)
+[2019 Open sourcing the Kubernetes security audit](https://www.cncf.io/blog/2019/08/06/open-sourcing-the-kubernetes-security-audit/)
+
+Just before the blog publication, merge the audit findings in https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit. 
+
+The blog may have a link to the findings in https://github.com/kubernetes/sig-security/tree/main/sig-security-external-audit that will have to be live before the blog is published.
