@@ -10,14 +10,14 @@ The Kubernetes community is invited to create issues and PRs to request addition
 | Authentication & Authorization (including Role Based Access Controls) | 2019 | |
 | Secrets Management | 2019 | |
 | Multi-tenancy isolation: Specifically soft (non-hostile co-tenants) | 2019 | |
-| kube-apiserver | 2021 | |
-| kube-scheduler | 2021 | |
-| etcd (in the context of Kubernetes use of etcd) | 2021 | |
-| kube-controller-manager | 2021 | |
-| cloud-controller-manager | 2021 | |
-| kubelet | 2021 | https://github.com/kubernetes/kubelet https://github.com/kubernetes/kubernetes/tree/master/staging/src/k8s.io/kubelet |
-| kube-proxy | 2021 | https://github.com/kubernetes/kubernetes/tree/master/staging/src/k8s.io/kube-proxy https://github.com/kubernetes/kube-proxy |
-| secrets-store-csi-driver | 2021 | https://github.com/kubernetes-sigs/secrets-store-csi-driver |
+| kube-apiserver | 2023  | |
+| kube-scheduler | 2023 | |
+| etcd (in the context of Kubernetes use of etcd) | 2023 | |
+| kube-controller-manager | 2023 | |
+| cloud-controller-manager | 2023 | |
+| kubelet | 2023 | https://github.com/kubernetes/kubelet https://github.com/kubernetes/kubernetes/tree/master/staging/src/k8s.io/kubelet |
+| kube-proxy | 2023 | https://github.com/kubernetes/kubernetes/tree/master/staging/src/k8s.io/kube-proxy https://github.com/kubernetes/kube-proxy |
+| secrets-store-csi-driver | 2023 | https://github.com/kubernetes-sigs/secrets-store-csi-driver |
 | cluster API | TBD | https://github.com/kubernetes-sigs/cluster-api |
 | kubectl | TBD | https://github.com/kubernetes/kubectl |
 | kubeadm | TBD | https://github.com/kubernetes/kubeadm |
@@ -35,3 +35,7 @@ The Kubernetes community is invited to create issues and PRs to request addition
 | csi plugins | TBD | https://github.com/kubernetes-csi |
 | aggregator layer | TBD | https://github.com/kubernetes/kube-aggregator |
 | windows | TBD | https://github.com/kubernetes/enhancements/tree/master/keps/sig-auth/2579-psp-replacement https://github.com/kubernetes/kubelet https://kubernetes.io/docs/concepts/workloads/pods/#pod-os https://github.com/kubernetes-csi/csi-proxy https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.28/#windowssecuritycontextoptions-v1-core https://github.com/kubernetes/kubernetes/tree/master/pkg/proxy/winkernel |
+| konnectivity | TBD | https://github.com/kubernetes-sigs/apiserver-network-proxy/tree/master/konnectivity-client |
+| shared cloud provider library | TBD | https://github.com/kubernetes/kubernetes/blob/master/staging/src/k8s.io/cloud-provider/ |
+| credential provider plugin | TBD | https://github.com/kubernetes/kubernetes/tree/master/pkg/credentialprovider/plugin |
+| image builder | TBD | https://github.com/kubernetes-sigs/image-builder |
