@@ -17,7 +17,7 @@ The Chairs of the SIG run operations and processes governing the SIG.
 
 * Ian Coldwater (**[@IanColdwater](https://github.com/IanColdwater)**), Docker
 * Tabitha Sable (**[@tabbysable](https://github.com/tabbysable)**), Datadog
-* Cailyn Edwards (**[@cailynse](https://github.com/cailynse)**), Octa
+* Cailyn Edwards (**[@cailyn-codes](https://github.com/cailyn-codes)**), Okta
 
 ## Contact
 - Slack: [#sig-security](https://kubernetes.slack.com/messages/sig-security)
