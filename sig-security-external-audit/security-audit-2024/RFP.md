@@ -133,7 +133,9 @@ Kubernetes, also known as K8s, is an open source system for automating deploymen
 
 Below are the components identified by the Kubernetes community as both needing additional security scrutiny and whose maintainers are open to enthusiastically participating in this project.
 
-These projects are ranked by importance on both the perceived criticality of the component by the community, and the information level of the documentation provided. It should also be carefully noted that auditors will have the flexibility to investigate hunches and seek out issues in other components if they so choose. The prioritization listed here is only compulsory for components specifically named below, or projects listed as “medium” and “high” priority in the [2024 Kubernetes Audit Scope document](https://docs.google.com/spreadsheets/d/1b_OrTHzLcPisShcera9eKtycKZORvW1z8Hm2If4NCF4).
+Because it is understood that there is far too much code to cover inside of the budget provided, these projects are prioritized both the perceived criticality of the component by the community, and the information level of the documentation provided. It should also be carefully noted that auditors will have the flexibility to investigate hunches and seek out issues in other components if they so choose. The “high priority” items in the list must be reviewed in full, while the components in the table marked “lower priority” should be completed ad-hoc on a best effort basis.
+
+Note that a few items in this document differ in priority from the [2024 Kubernetes Audit Scope document](https://docs.google.com/spreadsheets/d/1b_OrTHzLcPisShcera9eKtycKZORvW1z8Hm2If4NCF4). These changes were made due to continuous feedback from the Kubernetes security community and the priorities listed in this document should be considered the most up-to-date.
 
 Additional note: Some projects have little to no information about where the feature lives nor links to documentation. It will be the responsibility of the researchers to discover what these components do, where the code lives in the codebase, and investigate.
 
@@ -169,6 +171,9 @@ In the case of references to features, the appropriate blocks of code must be lo
 In the case of references to documentation, checks should be made to ensure that users should be able to create secure implementations by default, and that non default settings should be documented for any security risks that may be present.
 
 
+# **Components with Higher Priority**
+
+
 ### **Component: Konnectivity Client**
 
 Estimated LOC 2K + other PRs / Complexity High
@@ -192,9 +197,6 @@ Estimated LOC 11K + other PRs (JSON/YAML) / Complexity Low
 ### **Component: CEL Admission Control / ValidatingAdmissionPolicy**
 
 Estimated LOC 23K + other PRs / Complexity High (handles security secrets / permissions)
-
-**Component: kOps** \
-Estimated LOC 190K / Complexity High
 
 **Component: Ephemeral Containers**
 
@@ -238,15 +240,22 @@ Complexity to be assessed by auditors / No information available
 
 # **Components with Lower Priority**
 
-Below is a sanitized and sorted table for all of the remaining components in this engagement. ***Lower Priority components/features should be assessed on a best effort basis after all of the above features have been evaluated.*** If the researchers do not get to some of the components in this section of the scope, it should be carefully noted which components were not covered by this review, which will be crucial for follow-up research at a later time. 
+Below is a sanitized and sorted table for all of the remaining components in this engagement. ***Lower Priority components/features should be assessed on a best effort basis after all of the above features have been evaluated.*** If the researchers do not get to some of the components in this section of the scope, it should be carefully noted which components were not covered by this review, which will be crucial for follow-up research at a later time.
 
+ 
 
-# **Components and Features with No Information**
+**Disclaimer: Components and Features with No Information**
 
 Some components were submitted by the community with little to no information about the functionality or code related to them. For all of the following projects, features were brought in by the community in an ad-hoc fashion and less overall information was provided about their nature and where they live in the codebase. Researchers will need to refer to the PRs if provided, and the Kubernetes / subproject documentation to drill down and locate the code, understand the design, and make security assessments. 
 
 
 <table>
+  <tr>
+   <td><strong>Full List of Additional Components with Lower Priority</strong>
+   </td>
+   <td><strong>Derived From the <a href="https://docs.google.com/spreadsheets/d/1b_OrTHzLcPisShcera9eKtycKZORvW1z8Hm2If4NCF4">Original List Here</a></strong>
+   </td>
+  </tr>
   <tr>
    <td>CSI Migration Core
    </td>
@@ -279,12 +288,6 @@ Some components were submitted by the community with little to no information ab
   </tr>
   <tr>
    <td>TimeZone support in CronJob
-   </td>
-   <td>
-   </td>
-  </tr>
-  <tr>
-   <td>Freeze k8s.gcr.io image registry (out of scope -- no code change)
    </td>
    <td>
    </td>
@@ -755,6 +758,12 @@ https://github.com/kubernetes/kubernetes/pull/112163
 <a href="https://github.com/kubernetes/kubernetes/pull/119380">https://github.com/kubernetes/kubernetes/pull/119380</a>
    </td>
   </tr>
+  <tr>
+   <td>kOps
+   </td>
+   <td>
+   </td>
+  </tr>
 </table>
 
 
@@ -779,7 +788,7 @@ Windows Security Context Options: \
 
 **Do the components have sufficient documentation for an administrator to effectively set them up securely?**
 
-**Does this component have potential for any specific classes of bugs that need to be checked for that are often not caught by automated testing?**
+**Does this component have potential for any specific classes of bugs that need to be checked for that are often not caught by automated testing? (and if so, what are the results of your research)**
 
 **Activities, Deliverables and Documentation**
 
