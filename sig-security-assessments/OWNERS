@@ -1,7 +1,6 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
-reviewers:
-  - aladewberry
 approvers:
-  - aladewberry
   - sig-security-leads
+emeritus_approvers:
+  - aladewberry
