@@ -18,6 +18,8 @@
 
     As a 501(c)3 nonprofit organization, OSTIF has remained devoted to strengthening the Internet by improving the security of free and open software. We are committed to helping our partners and clients get the resources they need to maintain secure and reliable software. 
 
+    Since 2022, the CNCF have been working with OSTIF to conduct security audits for incubating and graduated CNCF projects. For more background on CNCF’s partnership with OSTIF and security audits, checkout blogs from [2022](https://www.cncf.io/blog/2022/08/08/improving-cncf-security-posture-with-independent-security-audits/) and [2023](https://www.cncf.io/blog/2023/03/13/an-overview-of-the-cncf-and-ostif-impact-report-for-the-second-half-of-2022-and-early-2023/)
+
 **Expectations and RFP Selection Criteria**
 
 OSTIF considers a diverse range of criteria when selecting a proposal for a project. This matrix outlines the main selection criteria:
@@ -126,6 +128,8 @@ Apache 2.0
   </tr>
 </table>
 
+
+For more information, see [OSTIF's Open Source Security Audit Minimum Standards and Expectations](https://docs.google.com/document/d/19ug1JSEFs_0-Tj2B4Co7rE7bMkZGDL_45VDKnBD0bNc)
 
 **Overall Project Description**
 
