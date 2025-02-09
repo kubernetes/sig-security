@@ -14,8 +14,8 @@
 # Reviewers
 
 * Alan Diaz, JPMorganChase  
-* Myles Hosford, Indepenent
-* Simon Bäumer, Red Hat  
+* Myles Hosford, Independent
+* Simon Bäumer, Red Hat
 * Brandt Keller, Defense Unicorns
 * Sachin Agarwal, Nirmata  
 
