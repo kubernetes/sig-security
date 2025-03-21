@@ -1,3 +1,7 @@
+# Subproject Archive
+The Self-Assessments subproject has been archived.
+
+Its reports and documentation are retained here for reference or possible future restarting
 # Self-assessment
 A Self-assessment is a great starting point for Kubernetes subprojects to reach a security baseline. Our team 
 will work with project maintainers create a threat model and assess the current security stance of all or a portion of 
