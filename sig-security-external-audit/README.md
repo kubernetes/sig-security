@@ -23,7 +23,7 @@ methodology, selection criteria, and deliverables in the RFP.
 
 Previous RFPs:
   - [2019](https://github.com/kubernetes/sig-security/blob/main/sig-security-external-audit/security-audit-2019/RFP.md)
-  - [2021](https://github.com/kubernetes/sig-security/blob/main/sig-security-external-audit/security-audit-2021/RFP.md)
+  - [2021](https://github.com/kubernetes/sig-security/blob/main/sig-security-external-audit/security-audit-2021-2022/RFP.md)
 
 As efforts begin for the year's security audit, create a tracking issue for the security audit in 
 `kubernetes/community` with the `/sig security` label.
