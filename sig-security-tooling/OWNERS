@@ -2,6 +2,8 @@
 
 reviewers:
   - pushkarj
+  - mtardy
 approvers:
   - pushkarj
+  - mtardy
   - sig-security-leads
