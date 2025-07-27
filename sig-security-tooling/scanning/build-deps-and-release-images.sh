@@ -23,11 +23,15 @@ if [ -z "${SNYK_TOKEN}" ]; then
 fi
 echo "Running snyk scan .."
 EXIT_CODE=0
-RESULT_UNFILTERED=$(snyk test -d --json) || EXIT_CODE=$?
+DEBUG_LOG_FILE=$(mktemp)
+RESULT_UNFILTERED=$(snyk test -d --json 2> "$DEBUG_LOG_FILE") || EXIT_CODE=$?
 if [ $EXIT_CODE -gt 1 ]; then
-    echo "Failed to run snyk scan with exit code $EXIT_CODE "
+    echo "Failed to run snyk scan with exit code $EXIT_CODE"
+    cat "$DEBUG_LOG_FILE"
     exit 1
 fi
+rm -f "$DEBUG_LOG_FILE"
+
 RESULT=$(echo $RESULT_UNFILTERED | jq \
 '{vulnerabilities: .vulnerabilities | map(select((.type != "license") and (.version !=  "0.0.0"))) | select(length > 0) }')
 if [[ ${RESULT} ]]; then
@@ -55,19 +59,23 @@ echo "Build time dependency scan completed"
 echo "Fetch the list of k8s images"
 curl -Ls https://sbom.k8s.io/$(curl -Ls https://dl.k8s.io/release/latest.txt)/release | grep "SPDXID: SPDXRef-Package-registry.k8s.io" | grep -v sha256 | cut -d- -f3- | sed 's/-/\//' | sed 's/-v1/:v1/' > images
 while read image; do
-    echo "Running container image scan.."
+    echo "Running container image scan for $image"
     EXIT_CODE=0
-    RESULT_UNFILTERED=$(snyk container test $image -d --json) || EXIT_CODE=$?
+    DEBUG_LOG_FILE=$(mktemp)
+    RESULT_UNFILTERED=$(snyk container test $image -d --json 2> "$DEBUG_LOG_FILE") || EXIT_CODE=$?
     if [ $EXIT_CODE -gt 1 ]; then
-    echo "Failed to run snyk scan with exit code $EXIT_CODE . Error message: $RESULT_UNFILTERED"
-    exit 1
+        echo "Failed to run snyk scan with exit code $EXIT_CODE"
+        cat "$DEBUG_LOG_FILE"
+        exit 1
     fi
+    rm -f "$DEBUG_LOG_FILE"
+
     RESULT=$(echo $RESULT_UNFILTERED | jq \
     '{vulnerabilities: .vulnerabilities | map(select(.isUpgradable == true or .isPatchable == true)) | select(length > 0) }')
     if [[ ${RESULT} ]]; then
-    echo "Vulnerability filtering failed"
-    # exit 1 (To allow other images to be scanned even if one fails)
+        echo "Vulnerability filtering failed"
+        # exit 1 (To allow other images to be scanned even if one fails)
     else
-    echo "Scan completed image $image"
+        echo "Scan completed image $image"
     fi
 done < images
