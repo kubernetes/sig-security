@@ -3,3 +3,5 @@
 approvers:
   - sig-security-leads
 
+emeritus_approvers:
+  - aladewberry
