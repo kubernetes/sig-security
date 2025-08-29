@@ -1,9 +1,10 @@
 # See the OWNERS docs at https://go.k8s.io/owners
 
 reviewers:
-  - pushkarj
   - mtardy
 approvers:
-  - pushkarj
   - mtardy
   - sig-security-leads
+
+emeritus_approvers:
+  - pushkarj
