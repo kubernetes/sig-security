@@ -6,6 +6,7 @@
 Here is the list of learning sessions hosted by sig-security tooling community:
 | **Date**   | **Topic**                                                              | **Speaker(s)**                                                                                          | **Link**                                     |
 | ---------- | :--------------------------------------------------------------------: | ------------------------------------------------------------------------------------------------------- | :------------------------------------------: |
+| 09-12-2025 | [Kubesonde](https://github.com/kubesonde/kubesonde)                         | [Jacopo Bufalino](https://github.com/jackap)                                                                 | https://www.youtube.com/watch?v=zyOD7oOLX5M |
 | 07-19-2023 | [Tetragon](https://github.com/cilium/tetragon)                         | [Mahé Tardy](https://github.com/mtardy)                                                                 | https://www.youtube.com/watch?v=4ifEI1n4lY4  |
 | 03-29-2023 | [Copacetic](https://github.com/project-copacetic/copacetic)            | [Xander Grzywinski](https://github.com/salaxander)                                                      | https://www.youtube.com/watch?v=6Be41Nf52ts  |
 | 03-01-2023 | [Security-Guard](https://github.com/knative-sandbox/security-guard)    | [David Hadas](https://github.com/davidhadas)                                                            | https://youtu.be/FNIdRBGwzOo                 |
