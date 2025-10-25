@@ -1,0 +1,46 @@
+# CVE-####-######: {{ .summary.Value }}
+
+---
+
+CVSS Rating: [{{ .cvss.Value }}](https://www.first.org/cvss/calculator/3.0#{{ .cvss.Value }})
+
+{{ .description.Value }}
+
+### Am I vulnerable?
+
+{{ .vulnerable.Value }}
+
+#### Affected Versions
+
+{{ .affected_versions.Value }}
+
+### How do I mitigate this vulnerability?
+
+{{ .mitigate.Value }}
+
+#### Fixed Versions
+
+{{ .affected_versions.Value }}
+
+### Detection
+
+{{ .detection.Value }}
+
+If you find evidence that this vulnerability has been exploited, please contact **security@kubernetes.io**
+
+{{- if .additional_details.Value }}
+## Additional Details
+
+{{ .AdditionalDetails.Value }}
+{{- end }}
+
+#### Acknowledgements
+
+{{ .acknowledgements.Value }}
+
+/area security
+/kind bug
+/committee security-response
+/label official-cve-feed
+/sig $RELEVANT_SIGS
+/area $IMPACTED_COMPONENTS
