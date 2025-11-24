@@ -151,7 +151,7 @@ func Run() error {
 				return fmt.Errorf("failed to flush state to disk: %w", err)
 			}
 			st.SetStatus(fmt.Sprintf("successfully saved to file %s.json", st.CVE))
-			fmt.Println(st.ToProcessedData())
+			// fmt.Println(st.ToProcessedData())
 		case 'j':
 			st.NextFocus()
 			st.SetStatus(fmt.Sprintf("scrolled to %d", st.GetFocus()))

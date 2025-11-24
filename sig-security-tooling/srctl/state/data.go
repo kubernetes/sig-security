@@ -3,7 +3,6 @@ package state
 import (
 	"bytes"
 	"fmt"
-	"log"
 	"net/url"
 	"regexp"
 	"strings"
@@ -61,13 +60,13 @@ func parseCVSS(cvssURL string) (CVSS, error) {
 	default: // Should be CVSS v2.0 or is invalid
 		cvss, err := gocvss20.ParseVector(out.Vector)
 		if err != nil {
-			log.Fatal(err)
+			return CVSS{}, fmt.Errorf("failed to parse CVSS:2.0 vector %q: %w", out.Vector, err)
 		}
 		out.Score = cvss.BaseScore()
 	case strings.HasPrefix(out.Vector, "CVSS:3.0"):
 		cvss, err := gocvss30.ParseVector(out.Vector)
 		if err != nil {
-			log.Fatal(err)
+			return CVSS{}, fmt.Errorf("failed to parse CVSS:3.0 vector %q: %w", out.Vector, err)
 		}
 		out.Score = cvss.BaseScore()
 		out.Severity, err = gocvss30.Rating(cvss.BaseScore())
@@ -77,7 +76,7 @@ func parseCVSS(cvssURL string) (CVSS, error) {
 	case strings.HasPrefix(out.Vector, "CVSS:3.1"):
 		cvss, err := gocvss31.ParseVector(out.Vector)
 		if err != nil {
-			log.Fatal(err)
+			return CVSS{}, fmt.Errorf("failed to parse CVSS:3.1 vector %q: %w", out.Vector, err)
 		}
 		out.Score = cvss.BaseScore()
 		out.Severity, err = gocvss31.Rating(cvss.BaseScore())
@@ -87,7 +86,7 @@ func parseCVSS(cvssURL string) (CVSS, error) {
 	case strings.HasPrefix(out.Vector, "CVSS:4.0"):
 		cvss, err := gocvss40.ParseVector(out.Vector)
 		if err != nil {
-			log.Fatal(err)
+			return CVSS{}, fmt.Errorf("failed to parse CVSS:4.0 vector %q: %w", out.Vector, err)
 		}
 		out.Score = cvss.Score()
 		out.Severity, err = gocvss40.Rating(cvss.Score())
