@@ -79,7 +79,7 @@ func Run() error {
 		}
 		// It's important to use %q here to escape any unsafe bytes that
 		// would mess up the terminal output
-		fmt.Printf("%q", pressedKey)
+		fmt.Printf("%q\n", pressedKey)
 
 		// Handle step number keys (0-9, a-b) before the switch
 		if step := state.StepNumberFromASCII(pressedKey); step >= 0 && step < state.StepMax {
