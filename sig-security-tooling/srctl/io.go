@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
+	"math"
 	"os"
 	"os/exec"
 	"strings"
@@ -20,12 +21,17 @@ const (
 var commonEditors = []string{"vi", "vim", "emacs", "nano"}
 
 func PromptUserOneByte() (b byte, returnedErr error) {
-	oldState, err := term.MakeRaw(int(os.Stdin.Fd()))
+	fileDesc := os.Stdin.Fd()
+	if fileDesc > math.MaxInt {
+		return 0, fmt.Errorf("stdin fd value %d overflows int", fileDesc)
+	}
+	fileDescInt := int(fileDesc)
+	oldState, err := term.MakeRaw(fileDescInt)
 	if err != nil {
 		return 0, fmt.Errorf("failed to put terminal in raw mode: %w", err)
 	}
 	defer func() {
-		err := term.Restore(int(os.Stdin.Fd()), oldState)
+		err := term.Restore(fileDescInt, oldState)
 		if err != nil {
 			returnedErr = fmt.Errorf("failed to restore the terminal: %w", err)
 		}
@@ -45,7 +51,8 @@ func instructions(number state.StepNumber, title, help, example string) []byte {
 	buf.WriteString("\n<!--\n")
 	buf.WriteString("Please enter the text for your changes. Empty lines and HTML\n")
 	buf.WriteString("comments lines will be ignored. An empty text aborts the change.\n\n")
-	buf.WriteString(fmt.Sprintf("%d) %s\n\n", number, title))
+	s := fmt.Sprintf("%d) %s\n\n", number, title) // for linter
+	buf.WriteString(s)
 	for l := range strings.SplitSeq(help, "\n") {
 		buf.WriteString(l + "\n")
 	}
@@ -97,8 +104,9 @@ func ReadFromEditor(number state.StepNumber, value, title, help, example string)
 		}
 	}
 
-	// #nosec G204
 	// caution: the binary starts whatever EDITOR is provided by user.
+	// #nosec G204
+	// #nosec G702
 	cmd := exec.Command(editor, tmpFile.Name())
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout

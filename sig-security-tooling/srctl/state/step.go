@@ -3,6 +3,7 @@ package state
 import (
 	"context"
 	"errors"
+	"fmt"
 	"os/exec"
 	"strings"
 	"time"
@@ -30,6 +31,9 @@ var _ [12 - StepMax]int
 type StepNumber int
 
 func (s StepNumber) ASCII() byte {
+	if s < 0 || s > 35 {
+		panic(fmt.Sprintf("this is a bug, please report: StepNumber.ToChar: value %d out of valid range [0, 35]", s))
+	}
 	if s < 10 {
 		return byte(s) + '0'
 	}
