@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"bytes"
 	"fmt"
-	"math"
 	"os"
 	"os/exec"
 	"strings"
@@ -21,11 +20,8 @@ const (
 var commonEditors = []string{"vi", "vim", "emacs", "nano"}
 
 func PromptUserOneByte() (b byte, returnedErr error) {
-	fileDesc := os.Stdin.Fd()
-	if fileDesc > math.MaxInt {
-		return 0, fmt.Errorf("stdin fd value %d overflows int", fileDesc)
-	}
-	fileDescInt := int(fileDesc)
+	// #nosec G115
+	fileDescInt := int(os.Stdin.Fd())
 	oldState, err := term.MakeRaw(fileDescInt)
 	if err != nil {
 		return 0, fmt.Errorf("failed to put terminal in raw mode: %w", err)
