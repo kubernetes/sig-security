@@ -14,8 +14,8 @@
 # limitations under the License.
 
 set -euo pipefail
-apt update && apt -y install jq
-wget -q -O /usr/local/bin/snyk https://static.snyk.io/cli/latest/snyk-linux && chmod +x /usr/local/bin/snyk
+apt update && apt -y install curl jq
+"$(dirname "$0")/install-snyk-cli.sh"
 mkdir -p "${ARTIFACTS}"
 if [ -z "${SNYK_TOKEN}" ]; then
     echo "SNYK_TOKEN env var is not set, required for snyk scan"
