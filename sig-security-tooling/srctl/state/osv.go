@@ -65,7 +65,7 @@ func (d CVEData) ToOSV() OSV {
 	now := time.Now().UTC().Format(time.RFC3339)
 
 	osv := OSV{
-		SchemaVersion: "1.6.0",
+		SchemaVersion: "1.6.0", //nolint:goconst
 		ID:            d.CVE,
 		Modified:      now,
 		Summary:       d.Summary,
@@ -96,7 +96,7 @@ func (d CVEData) ToOSV() OSV {
 		for component, versions := range componentVersions {
 			affected := OSVAffected{
 				Package: OSVPackage{
-					Ecosystem: "Kubernetes",
+					Ecosystem: "Kubernetes", //nolint:goconst
 					Name:      component,
 				},
 			}
@@ -125,7 +125,7 @@ func (d CVEData) ToOSV() OSV {
 
 	// Add CVE.org URL as ADVISORY reference
 	osv.References = append(osv.References, OSVRef{
-		Type: "ADVISORY",
+		Type: "ADVISORY", //nolint:goconst
 		URL:  "https://www.cve.org/cverecord?id=" + d.CVE,
 	})
 

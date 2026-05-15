@@ -26,7 +26,7 @@ import (
 // This file ensures we maintain compatibility with the official OSV schema.
 func (d CVEData) ToOSVOfficial() *osvschema.Vulnerability {
 	vuln := &osvschema.Vulnerability{
-		SchemaVersion: "1.6.0",
+		SchemaVersion: "1.6.0", //nolint:goconst
 		Id:            d.CVE,
 		Modified:      timestamppb.New(time.Now().UTC()),
 		Summary:       d.Summary,
@@ -56,7 +56,7 @@ func (d CVEData) ToOSVOfficial() *osvschema.Vulnerability {
 		for component, versions := range componentVersions {
 			affected := &osvschema.Affected{
 				Package: &osvschema.Package{
-					Ecosystem: "Kubernetes",
+					Ecosystem: "Kubernetes", //nolint:goconst
 					Name:      component,
 				},
 			}
