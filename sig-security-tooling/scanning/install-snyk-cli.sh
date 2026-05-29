@@ -29,6 +29,9 @@
 #   https://docs.snyk.io/developer-tools/snyk-cli/install-the-snyk-cli/verifying-cli-standalone-binaries
 snyk_key_fingerprint="467717A30B2B4658415975629691DA64D0025194"
 
+# Update this variable to install a different version of the Snyk CLI
+snyk_cli_version="1.1305.0" # 1.1305.0 is the latest stable version as of 2024-06-17
+
 set -euo pipefail
 apt update && apt -y install curl gnupg
 
@@ -36,18 +39,15 @@ tmpdir=$(mktemp -d)
 gpghome="${tmpdir}/gnupg"
 mkdir -p "${gpghome}"
 chmod 700 "${gpghome}"
-trap 'rm -rf "${tmpdir}"' EXIT
+trap 'rm -rf "${tmpdir}"' INT TERM EXIT
 
 echo "Downloading snyk-linux binary and signed checksums..."
-curl -sSfL -o "${tmpdir}/snyk-linux"         "https://downloads.snyk.io/cli/stable/snyk-linux"
-curl -sSfL -o "${tmpdir}/sha256sums.txt.asc" "https://downloads.snyk.io/cli/stable/sha256sums.txt.asc"
+curl -sSfL -o "${tmpdir}/snyk-linux"         "https://downloads.snyk.io/cli/v${snyk_cli_version}/snyk-linux"
+curl -sSfL -o "${tmpdir}/sha256sums.txt.asc" "https://downloads.snyk.io/cli/v${snyk_cli_version}/sha256sums.txt.asc"
 
-# Fetch Snyk's signing key from an independent keyserver by exact fingerprint.
-# The VKS URL encodes the fingerprint; the server returns 404 for unknown fingerprints,
-# making it impossible to accidentally fetch a different key via this URL.
-echo "Fetching Snyk PGP signing key from keys.openpgp.org (fingerprint: ${snyk_key_fingerprint})..."
-curl -sSfL "https://keys.openpgp.org/vks/v1/by-fingerprint/${snyk_key_fingerprint}" \
-  | GNUPGHOME="${gpghome}" gpg --import
+# snyk-code-signing.asc is the public PGP key used by Snyk to sign their CLI releases,
+# and was downloaded from https://keys.openpgp.org/vks/v1/by-fingerprint/${snyk_key_fingerprint}
+GNUPGHOME="${gpghome}" gpg --import "$(dirname "$0")/snyk-code-signing.asc"
 
 # Re-verify the imported fingerprint before trusting any signature.
 echo "Verifying imported key fingerprint..."
@@ -57,7 +57,8 @@ GNUPGHOME="${gpghome}" gpg --with-colons --fingerprint "${snyk_key_fingerprint}"
 
 # Verify PGP signature on the checksums file.
 echo "Verifying PGP signature on checksums file..."
-GNUPGHOME="${gpghome}" gpg --verify "${tmpdir}/sha256sums.txt.asc"
+GNUPGHOME="${gpghome}" gpg --export "${snyk_key_fingerprint}" > "${tmpdir}/snyk-verify.gpg"
+gpgv --keyring "${tmpdir}/snyk-verify.gpg" "${tmpdir}/sha256sums.txt.asc"
 
 # Extract hash lines from the PGP cleartext body (avoids armor-header format warnings)
 # and verify the SHA-256 digest of the downloaded binary.
