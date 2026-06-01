@@ -30,7 +30,7 @@
 snyk_key_fingerprint="467717A30B2B4658415975629691DA64D0025194"
 
 # Update this variable to install a different version of the Snyk CLI
-snyk_cli_version="1.1305.0" # 1.1305.0 is the latest stable version as of 2024-06-17
+snyk_cli_version="1.1305.0" # 1.1305.0 is the latest stable version as of 2026-06-17
 
 set -euo pipefail
 apt update && apt -y install curl gnupg
