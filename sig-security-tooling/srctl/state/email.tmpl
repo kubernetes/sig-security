@@ -32,7 +32,7 @@ Hello Kubernetes Community,
 {{- end }}
 {{- if .CVSS.URL }}
 
-This issue has been rated **{{ .CVSS.Severity }}** ([CVSS calculator]({{ .CVSS.URL }}), score: {{ .CVSS.Score }}), and assigned **{{ .CVE }}**
+This issue has been rated **{{ .CVSS.Score }}** ({{ .CVSS.Severity }}) ([CVSS calculator]({{ .CVSS.URL }}), and assigned **{{ .CVE }}**
 {{- else }}
 
 This issue has been assigned **{{ .CVE }}**
