@@ -1,0 +1,45 @@
+# examples/dns_records.yaml
+#
+# Example DNS records used to test the dangling DNS scanner.
+# This file is NOT production data.
+#
+# Expected behavior:
+# - Netlify dangling targets should be reported
+# - Valid Netlify sites should be ignored
+# - Non‑Netlify targets should be ignored
+# - Invalid records should be skipped safely
+
+records:
+  # Valid Netlify site (exists)
+  - hostname: docs.k8s.io
+    target: kubernetes-docs.netlify.app
+
+  # Dangling Netlify site
+  - hostname: dangling.k8s.io
+    target: definitely-not-existing-k8s.netlify.app
+
+  # Another dangling example
+  - hostname: old-preview.k8s.io
+    target: old-k8s-preview-123.netlify.app
+
+  # Netlify target with schema
+  - hostname: schema-test.k8s.io
+    target: https://missing-schema-test.netlify.app
+
+  # Non‑Netlify target (ignored)
+  - hostname: www.k8s.io
+    target: k8s.io
+
+  # External cloud provider (ignored)
+  - hostname: storage.k8s.io
+    target: storage.googleapis.com
+
+  # Record missing target (should be skipped)
+  - hostname: broken-record.k8s.io
+
+  # Record missing hostname (should be skipped)
+  - target: missing-hostname.netlify.app
+
+  # Weird but valid CNAME-like entry
+  - hostname: cname-style.k8s.io
+    target: alias-to-something.netlify.app
