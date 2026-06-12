@@ -48,7 +48,7 @@ func Run() error {
 
 	var st state.Internal
 	// Let's try to find a local saved state.
-	// #nosec G304
+	// #nosec G304,G703
 	// caution: the binary opens a file based on provided argument.
 	file, err := os.Open(cve + ".json")
 	if err != nil {
