@@ -1,4 +1,4 @@
-module k8s.io/kubernetes/sig-security/srctl
+module k8s.io/sig-security/sig-security-tooling/srctl
 
 go 1.25.3
 
