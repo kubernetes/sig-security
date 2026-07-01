@@ -37,7 +37,10 @@ $ python3 hack/build-feed.py --check  # CI: non-zero exit if the feed is stale
 
 ## Typical workflow
 
-1. Add or edit a per-issue document under `files/`.
+1. Add a per-issue document under `files/` — either by hand, or scaffold one
+   with `python3 hack/new-issue.py <issue-number>` (fetches the issue, extracts
+   its CVE IDs, and writes a stub with status `under_investigation` and TODO
+   notes for you to complete).
 2. If the new/changed CVE is reported by more than one issue, add or update its
    entry in `merge-overrides.json`.
 3. Run `python3 hack/build-feed.py`.
@@ -46,7 +49,10 @@ $ python3 hack/build-feed.py --check  # CI: non-zero exit if the feed is stale
 
 ## Files
 
-- `build-feed.py` — the generator.
+- `build-feed.py` — the generator (builds the combined feed from `files/`).
+- `new-issue.py` — scaffolds a `files/issue-<n>.openvex.json` stub from a GitHub
+  issue (fetches it, extracts CVE IDs); status/justification/notes are left as
+  TODO for a human to complete. Refuses to overwrite an existing file.
 - `merge-overrides.json` — curated merged notes for CVEs reported by multiple
   issues; `status` / `justification` / `product` are still derived from
   `files/` and are not overridable here.
