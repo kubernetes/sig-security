@@ -6,7 +6,7 @@ ISSUE TITLE: `{{ .CVE }}{{ if .Summary }}: {{ .Summary }}{{ end}}`
 
 ---
 {{ if .CVSS.URL }}
-CVSS Rating: [{{ .CVSS.Vector }}]({{ .CVSS.URL }})
+CVSS Rating: **{{ .CVSS.Score }}** ({{ .CVSS.Severity }}) [{{ .CVSS.Vector }}]({{ .CVSS.URL }})
 {{- end }}
 
 {{- if .Description }}

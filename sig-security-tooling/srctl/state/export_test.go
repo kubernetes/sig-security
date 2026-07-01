@@ -12,7 +12,7 @@ func TestToIssue(t *testing.T) {
 		CVSS: CVSS{
 			URL:      "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
 			Vector:   "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-			Severity: "High",
+			Severity: "HIGH",
 			Score:    8.8,
 		},
 		Description: "A vulnerability was found in kube-apiserver.",
@@ -37,6 +37,7 @@ func TestToIssue(t *testing.T) {
 
 	expectedStrings := []string{
 		"ISSUE TITLE: `CVE-2024-1234: Buffer overflow in kube-apiserver`",
+		"CVSS Rating: **8.8** (HIGH)",
 		"CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
 		"A vulnerability was found in kube-apiserver.",
 		"### Am I vulnerable?",
@@ -74,7 +75,7 @@ func TestToEmail(t *testing.T) {
 		CVSS: CVSS{
 			URL:      "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
 			Vector:   "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-			Severity: "High",
+			Severity: "HIGH",
 			Score:    8.8,
 		},
 		Description: "A vulnerability was found in kube-apiserver.",
@@ -102,9 +103,8 @@ func TestToEmail(t *testing.T) {
 		"SUBJECT: `[kubernetes] CVE-2024-1234: Buffer overflow in kube-apiserver`",
 		"Hello Kubernetes Community,",
 		"A vulnerability was found in kube-apiserver.",
-		"**High**",
+		"**8.8** (HIGH)",
 		"[CVSS calculator](https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H)",
-		"score: 8.8",
 		"### Am I vulnerable?",
 		"Clusters running kube-apiserver versions below v1.31.12 are affected.",
 		"#### Affected Versions",
@@ -140,7 +140,7 @@ func TestToSlack(t *testing.T) {
 		CVSS: CVSS{
 			URL:      "https://www.first.org/cvss/calculator/3.1#CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
 			Vector:   "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:H/A:H",
-			Severity: "High",
+			Severity: "HIGH",
 			Score:    8.8,
 		},
 	}
@@ -153,7 +153,7 @@ func TestToSlack(t *testing.T) {
 	result := string(output)
 
 	expectedStrings := []string{
-		"**High**",
+		"**8.8** (HIGH)",
 		"**CVE-2024-1234**",
 	}
 
