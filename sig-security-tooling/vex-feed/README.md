@@ -24,8 +24,10 @@ Source query (kubernetes/kubernetes): `is:issue state:closed CVE -label:official
 
 ## Files
 
-- `kubernetes-vex-feed-draft.openvex.json` — combined OpenVEX feed, deduped to **one statement per CVE** (21 statements). CVEs reported in more than one issue cite all source issues in the notes.
+- `kubernetes-vex-feed-draft.openvex.json` — combined OpenVEX feed, deduped to **one statement per CVE** (21 statements). CVEs reported in more than one issue cite all source issues in the notes. **Generated — do not edit by hand** (see below).
 - `files/issue-<num>.openvex.json` — per-issue OpenVEX documents, the source of truth, kept for provenance (the same CVE may appear across more than one issue file).
+- `hack/build-feed.py` — regenerates the combined feed from `files/` (`--check` for CI); see `hack/README.md`.
+- `hack/merge-overrides.json` — curated notes for CVEs reported by multiple issues.
 
 ## Validation
 
