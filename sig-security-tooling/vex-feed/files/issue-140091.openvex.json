@@ -1,0 +1,77 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/kubernetes/kubernetes/issues/140091",
+  "author": "kubernetes maintainers",
+  "timestamp": "2026-07-01T18:28:05Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-68121"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs flagged against the kubectl go.mod (go 1.26.0). Overlaps #137195/#139510. Remediated by scheduled Go toolchain bumps already merged/in progress across supported branches; a maintainer pointed to the project security guide (Go CVEs are tracked and fixed on the standard schedule). [ref: https://github.com/kubernetes/kubernetes/issues/140091]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33811"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs flagged against the kubectl go.mod (go 1.26.0). Overlaps #137195/#139510. Remediated by scheduled Go toolchain bumps already merged/in progress across supported branches; a maintainer pointed to the project security guide (Go CVEs are tracked and fixed on the standard schedule). [ref: https://github.com/kubernetes/kubernetes/issues/140091]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33814"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs flagged against the kubectl go.mod (go 1.26.0). Overlaps #137195/#139510. Remediated by scheduled Go toolchain bumps already merged/in progress across supported branches; a maintainer pointed to the project security guide (Go CVEs are tracked and fixed on the standard schedule). [ref: https://github.com/kubernetes/kubernetes/issues/140091]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39836"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs flagged against the kubectl go.mod (go 1.26.0). Overlaps #137195/#139510. Remediated by scheduled Go toolchain bumps already merged/in progress across supported branches; a maintainer pointed to the project security guide (Go CVEs are tracked and fixed on the standard schedule). [ref: https://github.com/kubernetes/kubernetes/issues/140091]"
+    }
+  ]
+}

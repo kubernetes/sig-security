@@ -1,0 +1,27 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/kubernetes/kubernetes/issues/139221",
+  "author": "kubernetes maintainers",
+  "timestamp": "2026-07-01T18:28:05Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-33186"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/google.golang.org/grpc"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "status_notes": "A maintainer determined Kubernetes has no in-tree gRPC servers using path-based authorization interceptors (google.golang.org/grpc/authz RBAC or custom interceptors relying on info.FullMethod / grpc.Method(ctx)) with 'deny' rules plus a default 'allow' fallback — the two conditions GHSA-p77j-4mvh-x3m3 requires. The vulnerable code path is not present. Reporter provided only a scanner hit. [ref: https://github.com/kubernetes/kubernetes/issues/139221]"
+    }
+  ]
+}

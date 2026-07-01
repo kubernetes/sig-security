@@ -1,0 +1,26 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/kubernetes/kubernetes/issues/140092",
+  "author": "kubernetes maintainers",
+  "timestamp": "2026-07-01T18:28:05Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39821"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "under_investigation",
+      "status_notes": "kubectl 1.36.2 ships golang.org/x/net v0.49.0 (<v0.55.0), flagged for CVE-2026-39821. The reporter explicitly did NOT confirm that kubectl reaches the vulnerable x/net/idna code path, and maintainers made no reachability ruling in-issue (directed to the security guide). Reachability of the vulnerable code in kubectl is undetermined. [ref: https://github.com/kubernetes/kubernetes/issues/140092]"
+    }
+  ]
+}
