@@ -7,6 +7,12 @@ import (
 	"time"
 )
 
+const (
+	osvSchemaVersion = "1.6.0"
+	osvEcosystem     = "Kubernetes"
+	osvTypeAdvisory  = "ADVISORY"
+)
+
 // OSV represents the Open Source Vulnerability format.
 // See: https://ossf.github.io/osv-schema/
 type OSV struct {
@@ -65,7 +71,7 @@ func (d CVEData) ToOSV() OSV {
 	now := time.Now().UTC().Format(time.RFC3339)
 
 	osv := OSV{
-		SchemaVersion: "1.6.0",
+		SchemaVersion: osvSchemaVersion,
 		ID:            d.CVE,
 		Modified:      now,
 		Summary:       d.Summary,
@@ -96,7 +102,7 @@ func (d CVEData) ToOSV() OSV {
 		for component, versions := range componentVersions {
 			affected := OSVAffected{
 				Package: OSVPackage{
-					Ecosystem: "Kubernetes",
+					Ecosystem: osvEcosystem,
 					Name:      component,
 				},
 			}
@@ -125,14 +131,14 @@ func (d CVEData) ToOSV() OSV {
 
 	// Add CVE.org URL as ADVISORY reference
 	osv.References = append(osv.References, OSVRef{
-		Type: "ADVISORY",
+		Type: osvTypeAdvisory,
 		URL:  "https://www.cve.org/cverecord?id=" + d.CVE,
 	})
 
 	// Add GitHub issue URL as ADVISORY reference if available
 	if d.GitHubIssue.URL != "" {
 		osv.References = append(osv.References, OSVRef{
-			Type: "ADVISORY",
+			Type: osvTypeAdvisory,
 			URL:  d.GitHubIssue.URL,
 		})
 	}

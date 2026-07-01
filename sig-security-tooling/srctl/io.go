@@ -45,7 +45,7 @@ func instructions(number state.StepNumber, title, help, example string) []byte {
 	buf.WriteString("\n<!--\n")
 	buf.WriteString("Please enter the text for your changes. Empty lines and HTML\n")
 	buf.WriteString("comments lines will be ignored. An empty text aborts the change.\n\n")
-	buf.WriteString(fmt.Sprintf("%d) %s\n\n", number, title))
+	fmt.Fprintf(&buf, "%d) %s\n\n", number, title)
 	for l := range strings.SplitSeq(help, "\n") {
 		buf.WriteString(l + "\n")
 	}
@@ -97,7 +97,7 @@ func ReadFromEditor(number state.StepNumber, value, title, help, example string)
 		}
 	}
 
-	// #nosec G204
+	// #nosec G204,G702
 	// caution: the binary starts whatever EDITOR is provided by user.
 	cmd := exec.Command(editor, tmpFile.Name())
 	cmd.Stdin = os.Stdin

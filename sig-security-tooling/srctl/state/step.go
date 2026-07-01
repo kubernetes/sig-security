@@ -31,8 +31,10 @@ type StepNumber int
 
 func (s StepNumber) ASCII() byte {
 	if s < 10 {
+		// #nosec G115
 		return byte(s) + '0'
 	}
+	// #nosec G115
 	return byte(s-10) + 'a'
 }
 
