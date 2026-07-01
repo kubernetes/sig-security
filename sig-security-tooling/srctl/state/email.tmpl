@@ -47,7 +47,7 @@ This issue has been assigned **{{ .CVE }}**
 
 #### Affected Versions
 {{ range .Versions }}
-- {{ .Component }}: {{ if .FirstAffectedVersion }}{{ .FirstAffectedVersion }}{{ end }}{{ if and .FirstAffectedVersion .FixedVersion }} < {{ end }}{{ if .FixedVersion }}{{ .FixedVersion }}{{ end }}
+- {{ .Component }}: {{ if .FirstAffectedVersion }}{{ .FirstAffectedVersion }} {{ end }}< {{ .FixedVersion }}
 {{- end }}
 {{- end }}
 

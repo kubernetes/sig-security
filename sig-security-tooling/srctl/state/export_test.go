@@ -188,6 +188,26 @@ func TestToEmailWithoutCVSS(t *testing.T) {
 	}
 }
 
+func TestToEmailAffectedVersionsFormat(t *testing.T) {
+	// Regression test: old template only showed '<' when both FirstAffectedVersion and FixedVersion existed
+	data := CVEData{
+		CVE: "CVE-2024-1234",
+		Versions: []Versions{
+			{Component: "kube-apiserver", FirstAffectedVersion: "", FixedVersion: "v1.31.12"},
+		},
+	}
+
+	output, err := data.ToEmail()
+	if err != nil {
+		t.Fatalf("ToEmail() error: %v", err)
+	}
+
+	result := string(output)
+	if !strings.Contains(result, "kube-apiserver: < v1.31.12") {
+		t.Error("ToEmail() should show '<' even when FirstAffectedVersion is empty")
+	}
+}
+
 func TestToIssueMinimalData(t *testing.T) {
 	data := CVEData{
 		CVE:      "CVE-2024-9999",
