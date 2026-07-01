@@ -100,6 +100,11 @@ func ReadFromEditor(number state.StepNumber, value, title, help, example string)
 	// #nosec G204
 	// caution: the binary starts whatever EDITOR is provided by user.
 	cmd := exec.Command(editor, tmpFile.Name())
+	editorFields := strings.Fields(editor)
+	isGuiEditor := len(editorFields) == 2 && (editorFields[1] == "--wait" || editorFields[1] == "-w")
+	if isGuiEditor {
+		cmd = exec.Command(editorFields[0], editorFields[1], tmpFile.Name())
+	}
 	cmd.Stdin = os.Stdin
 	cmd.Stdout = os.Stdout
 	cmd.Stderr = os.Stderr
