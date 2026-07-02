@@ -1,0 +1,27 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/kubernetes/kubernetes/issues/138329",
+  "author": "kubernetes maintainers",
+  "timestamp": "2026-07-01T18:28:05Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39883"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/go.opentelemetry.io/otel/sdk@v1.40.0"
+            }
+          ]
+        }
+      ],
+      "status": "not_affected",
+      "justification": "vulnerable_code_not_present",
+      "status_notes": "The vulnerable code (go.opentelemetry.io/otel/sdk/resource host_id_bsd.go, which runs 'kenv' without an absolute path) is gated behind DragonFly/FreeBSD/NetBSD/OpenBSD/Solaris build tags. Kubernetes ships only linux/windows/darwin binaries, so the vulnerable BSD-specific code is not compiled into shipped artifacts. A maintainer confirmed Kubernetes does not ship binaries or images for any of the affected platforms, so it is not affected. [ref: https://github.com/kubernetes/kubernetes/issues/138329]"
+    }
+  ]
+}

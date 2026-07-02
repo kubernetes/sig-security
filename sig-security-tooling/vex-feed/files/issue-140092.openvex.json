@@ -1,0 +1,26 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/kubernetes/kubernetes/issues/140092",
+  "author": "kubernetes maintainers",
+  "timestamp": "2026-07-01T18:28:05Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-39821"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/golang.org/x/net@v0.49.0"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "CVE-2026-39821 affects golang.org/x/net before v0.55.0 (x/net/idna); the scanner flagged kubectl 1.36.2, which shipped golang.org/x/net v0.49.0. Fixed upstream: Kubernetes now vendors golang.org/x/net >= v0.55.0 (currently v0.55.1-0.20260602153038-42abb857022c), so the vulnerable version is no longer present. Related dependency bumps: https://github.com/kubernetes/kubernetes/pull/138561, https://github.com/kubernetes/kubernetes/pull/139420. [ref: https://github.com/kubernetes/kubernetes/issues/140092]"
+    }
+  ]
+}

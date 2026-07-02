@@ -1,0 +1,179 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/kubernetes/kubernetes/issues/135083",
+  "author": "kubernetes maintainers",
+  "timestamp": "2026-07-01T18:28:05Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-47912"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs in kubectl v1.33.5. A maintainer confirmed Go was already updated to 1.24.9 on release-1.33 but not yet released; fix merged, release pending at close. [ref: https://github.com/kubernetes/kubernetes/issues/135083]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-58183"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs in kubectl v1.33.5. A maintainer confirmed Go was already updated to 1.24.9 on release-1.33 but not yet released; fix merged, release pending at close. [ref: https://github.com/kubernetes/kubernetes/issues/135083]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-58185"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs in kubectl v1.33.5. A maintainer confirmed Go was already updated to 1.24.9 on release-1.33 but not yet released; fix merged, release pending at close. [ref: https://github.com/kubernetes/kubernetes/issues/135083]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-58186"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs in kubectl v1.33.5. A maintainer confirmed Go was already updated to 1.24.9 on release-1.33 but not yet released; fix merged, release pending at close. [ref: https://github.com/kubernetes/kubernetes/issues/135083]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-58187"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs in kubectl v1.33.5. A maintainer confirmed Go was already updated to 1.24.9 on release-1.33 but not yet released; fix merged, release pending at close. [ref: https://github.com/kubernetes/kubernetes/issues/135083]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-58188"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs in kubectl v1.33.5. A maintainer confirmed Go was already updated to 1.24.9 on release-1.33 but not yet released; fix merged, release pending at close. [ref: https://github.com/kubernetes/kubernetes/issues/135083]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-58189"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs in kubectl v1.33.5. A maintainer confirmed Go was already updated to 1.24.9 on release-1.33 but not yet released; fix merged, release pending at close. [ref: https://github.com/kubernetes/kubernetes/issues/135083]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-61723"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs in kubectl v1.33.5. A maintainer confirmed Go was already updated to 1.24.9 on release-1.33 but not yet released; fix merged, release pending at close. [ref: https://github.com/kubernetes/kubernetes/issues/135083]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-61724"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs in kubectl v1.33.5. A maintainer confirmed Go was already updated to 1.24.9 on release-1.33 but not yet released; fix merged, release pending at close. [ref: https://github.com/kubernetes/kubernetes/issues/135083]"
+    },
+    {
+      "vulnerability": {
+        "name": "CVE-2025-61725"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib CVEs in kubectl v1.33.5. A maintainer confirmed Go was already updated to 1.24.9 on release-1.33 but not yet released; fix merged, release pending at close. [ref: https://github.com/kubernetes/kubernetes/issues/135083]"
+    }
+  ]
+}

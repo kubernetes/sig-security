@@ -1,0 +1,26 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/kubernetes/kubernetes/issues/138040",
+  "author": "kubernetes maintainers",
+  "timestamp": "2026-07-01T18:28:05Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2026-25679"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib@v1.25.7"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Duplicate of #137853. Go stdlib CVE-2026-25679 in kubectl v1.35.3 (built with Go 1.25.7); fixed in Go 1.25.8 / 1.26.1. Reporter mistyped the ID as 'CVE-2026-2567'. Linked to #137853 as the tracking issue. Remediated via Go bump. [ref: https://github.com/kubernetes/kubernetes/issues/138040]"
+    }
+  ]
+}

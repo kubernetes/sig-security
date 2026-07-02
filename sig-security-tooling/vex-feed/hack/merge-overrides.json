@@ -1,0 +1,18 @@
+{
+  "_comment": "Curated status_notes for CVEs reported by multiple issues. build-feed.py uses these for the merged (per-CVE) statement; status, justification, product, and subcomponents are still derived from files/ and must agree across sources. Single-source CVEs need no entry here.",
+  "CVE-2025-68121": {
+    "status_notes": "CVE-2025-68121 (Go stdlib crypto/tls — unexpected TLS session resumption) affects kubectl binaries built with an unpatched Go. Fixed in Go 1.24.13 / 1.25.7 / 1.26.0-rc.3; a maintainer confirmed the Go bump was already merged into supported Kubernetes branches and pending the next release when these issues closed. Reported independently in #137195, #137228, and #140091. [sources: https://github.com/kubernetes/kubernetes/issues/137195, https://github.com/kubernetes/kubernetes/issues/137228, https://github.com/kubernetes/kubernetes/issues/140091]"
+  },
+  "CVE-2026-25679": {
+    "status_notes": "CVE-2026-25679 (Go stdlib) affects kubectl binaries built with Go 1.25.7. Fixed in Go 1.25.8 / 1.26.1; a maintainer confirmed Go was already updated across all supported Kubernetes branches with patch releases in progress at close. Reported in #137853 and #138040 (the latter mistyped the ID as 'CVE-2026-2567'). [sources: https://github.com/kubernetes/kubernetes/issues/137853, https://github.com/kubernetes/kubernetes/issues/138040]"
+  },
+  "CVE-2026-33811": {
+    "status_notes": "CVE-2026-33811 (Go stdlib) affects kubectl binaries for 1.33/1.34/1.35 built with Go 1.25.9. Fixed in Go 1.26.3+; the Go 1.26.4 bump landed on master (#139479) and release-1.36 (#138871). Backports to the supported 1.34/1.35 branches follow the monthly patch cadence (a maintainer pointed to the security/patch process rather than confirming per-branch in-issue). Reported in #139510 and #140091. [sources: https://github.com/kubernetes/kubernetes/issues/139510, https://github.com/kubernetes/kubernetes/issues/140091]"
+  },
+  "CVE-2026-33814": {
+    "status_notes": "CVE-2026-33814 (Go stdlib) affects kubectl binaries for 1.33/1.34/1.35 built with Go 1.25.9. Fixed in Go 1.26.3+; the Go 1.26.4 bump landed on master (#139479) and release-1.36 (#138871). Backports to the supported 1.34/1.35 branches follow the monthly patch cadence (a maintainer pointed to the security/patch process rather than confirming per-branch in-issue). Reported in #139510 and #140091. [sources: https://github.com/kubernetes/kubernetes/issues/139510, https://github.com/kubernetes/kubernetes/issues/140091]"
+  },
+  "CVE-2026-39836": {
+    "status_notes": "CVE-2026-39836 (Go stdlib net — panic on NUL byte in Dial/LookupPort on Windows) affects kubectl binaries for 1.33/1.34/1.35 built with Go 1.25.9. Fixed in Go 1.26.3+; the Go 1.26.4 bump landed on master (#139479) and release-1.36 (#138871). Backports to the supported 1.34/1.35 branches follow the monthly patch cadence. Reported in #139510 and #140091. [sources: https://github.com/kubernetes/kubernetes/issues/139510, https://github.com/kubernetes/kubernetes/issues/140091]"
+  }
+}

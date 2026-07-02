@@ -1,0 +1,26 @@
+{
+  "@context": "https://openvex.dev/ns/v0.2.0",
+  "@id": "https://github.com/kubernetes/kubernetes/issues/137195",
+  "author": "kubernetes maintainers",
+  "timestamp": "2026-07-01T18:28:05Z",
+  "version": 1,
+  "statements": [
+    {
+      "vulnerability": {
+        "name": "CVE-2025-68121"
+      },
+      "products": [
+        {
+          "@id": "pkg:golang/k8s.io/kubernetes",
+          "subcomponents": [
+            {
+              "@id": "pkg:golang/stdlib"
+            }
+          ]
+        }
+      ],
+      "status": "fixed",
+      "status_notes": "Go stdlib crypto/tls CVE-2025-68121 in kubectl v1.35.1. A maintainer confirmed the fix was already merged in supported branches, pending the next release. Root issue for the #137228 duplicate. [ref: https://github.com/kubernetes/kubernetes/issues/137195]"
+    }
+  ]
+}
